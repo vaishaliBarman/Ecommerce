@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg custom-navbar">
     <div class="container">
+      <img :src="logo" alt="Logo" class="navbar-logo" />
       
-      <router-link class="navbar-brand" to="/">MyShop</router-link>
       <button
         class="navbar-toggler collapsed"
         type="button"
@@ -13,7 +13,7 @@
         aria-label="Toggle navigation"
     
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-ICONICtoggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
@@ -36,9 +36,23 @@
     </div>
   </nav>
 </template>
+<script >
+import logo from '../assets/hot.png';
+export default {
+  name: 'Navbar',
+  data() {
+    return {
+      logo: logo
+    };
+  },
+  mounted() {
+    // Add any additional logic if needed when the component is mounted
+  }
+};
+</script>
 <style scoped>
 .custom-navbar {
-  background-color: #4B2E2E; /* Dark brown */
+  background-color: #773f0a; /* Dark brown */
   color: white;
 }
 
@@ -67,4 +81,9 @@
 .container {
    font-family: cursive
 }
+.navbar-logo {
+  height: 80px;
+  width: 100px;
+}
+
 </style>
